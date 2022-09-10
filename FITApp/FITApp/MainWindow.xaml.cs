@@ -32,6 +32,9 @@ namespace FITApp
             if(Login(UserName, Password))
             {
                 MessageBox.Show("Logged in");
+                LoggedWindow Logged = new LoggedWindow(UserName);
+                Logged.Show();
+                this.Close();
             }
             else
             {

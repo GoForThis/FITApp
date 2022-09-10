@@ -82,6 +82,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="LoggedWindow.xaml.cs">
+      <DependentUpon>LoggedWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ManagementSystemModels.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -90,6 +93,10 @@
     <Compile Include="User.cs">
       <DependentUpon>ManagementSystemModels.tt</DependentUpon>
     </Compile>
+    <Page Include="LoggedWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

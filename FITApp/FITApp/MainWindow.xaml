@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FITApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" MaxWidth="900" MaxHeight="500" MinWidth="590" MinHeight="343">
+        Title="FITApp" Height="450" Width="800" MaxWidth="900" MaxHeight="500" MinWidth="590" MinHeight="343">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
