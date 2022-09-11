@@ -90,6 +90,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ManagementSystemModels.tt</DependentUpon>
     </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>ManagementSystemModels.tt</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>ManagementSystemModels.tt</DependentUpon>
     </Compile>

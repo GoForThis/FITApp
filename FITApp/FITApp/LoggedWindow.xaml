@@ -35,8 +35,8 @@
         <Label Content="How many calories:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="160,144,0,0" Grid.Column="1" Grid.ColumnSpan="2" Width="145"/>
         <Label Content="Comment:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="160,185,0,0" Grid.Column="1" Grid.ColumnSpan="2" Width="145"/>
         <Label Content="Date:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="160,221,0,0" Grid.Column="1" Grid.ColumnSpan="2" Width="145"/>
-        <DatePicker HorizontalAlignment="Left" Margin="10,69,0,0" Grid.Row="1" VerticalAlignment="Top" Width="190" Height="33" FontSize="16"/>
-        <Button Content="View" HorizontalAlignment="Left" Margin="205,68,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="82" Grid.ColumnSpan="2"/>
+        <DatePicker x:Name="DateToView" HorizontalAlignment="Left" Margin="10,69,0,0" Grid.Row="1" VerticalAlignment="Top" Width="190" Height="33" FontSize="16"/>
+        <Button Content="View" HorizontalAlignment="Left" Margin="205,68,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="82" Grid.ColumnSpan="2" Click="Click_View"/>
 
 
     </Grid>

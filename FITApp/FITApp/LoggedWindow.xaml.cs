@@ -23,6 +23,24 @@ namespace FITApp
         {
             InitializeComponent();
             UserDisplay.Content = User;
+            DBEntities db = new DBEntities();
+            var products = from d in db.Products
+                        where d.User == User
+                           select d;
+            this.Grid_of_products.ItemsSource = products.ToList();
+        }
+
+        private void Click_View(object sender, RoutedEventArgs e)
+        {
+            DateTime dateTime = (DateTime)DateToView.SelectedDate;
+
+            string User = (string)UserDisplay.Content;
+
+            DBEntities db = new DBEntities();
+            var products = from d in db.Products
+                           where d.User == User && d.Date == dateTime
+                           select d;
+            this.Grid_of_products.ItemsSource = products.ToList();
         }
     }
 }
