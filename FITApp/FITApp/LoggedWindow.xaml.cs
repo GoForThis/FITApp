@@ -42,5 +42,26 @@ namespace FITApp
                            select d;
             this.Grid_of_products.ItemsSource = products.ToList();
         }
+
+        private void Click_Add(object sender, RoutedEventArgs e)
+        {
+            DBEntities db = new DBEntities();
+            Product productObject = new Product()
+            {
+                Name = Name_Add.Text,
+                Calories = Calories_Add.Text,
+                Comment = Comment_Add.Text,
+                User = (string)UserDisplay.Content,
+                Date = (DateTime)Date_Add.SelectedDate
+            };
+            db.Products.Add(productObject);
+            db.SaveChanges();
+
+            Name_Add.Text = "";
+            Calories_Add.Text = "";
+            Comment_Add.Text = "";
+            
+            
+        }
     }
 }

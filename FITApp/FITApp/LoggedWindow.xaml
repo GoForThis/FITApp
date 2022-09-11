@@ -24,12 +24,12 @@
 
         <DataGrid x:Name="Grid_of_products" IsReadOnly="True" Grid.ColumnSpan="2" Margin="0,107,133,107" Grid.Row="1" />
 
-        <TextBox Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="33" Margin="0,107,0,0"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="33" Margin="0,145,0,0"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="33" Margin="0,183,0,0"/>
-        <DatePicker Grid.Column="2" HorizontalAlignment="Center" Margin="0,221,0,0" Grid.Row="1" VerticalAlignment="Top" Width="190" Height="33" FontSize="16"/>
+        <TextBox x:Name="Name_Add" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="33" Margin="0,107,0,0"/>
+        <TextBox x:Name="Calories_Add" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="33" Margin="0,145,0,0"/>
+        <TextBox x:Name="Comment_Add" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="33" Margin="0,183,0,0"/>
+        <DatePicker x:Name="Date_Add" Grid.Column="2" HorizontalAlignment="Center" Margin="0,221,0,0" Grid.Row="1" VerticalAlignment="Top" Width="190" Height="33" FontSize="16"/>
 
-        <Button Grid.Column="2" Content="Add" HorizontalAlignment="Center" Margin="0,259,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="138"/>
+        <Button Grid.Column="2" Content="Add" HorizontalAlignment="Center" Margin="0,259,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="138" Click="Click_Add"/>
 
         <Label Grid.Column="1" Content="Name of food:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Grid.ColumnSpan="2" Margin="160,108,0,0" Width="140"/>
         <Label Content="How many calories:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="160,144,0,0" Grid.Column="1" Grid.ColumnSpan="2" Width="145"/>
