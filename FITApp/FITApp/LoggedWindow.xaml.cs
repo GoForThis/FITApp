@@ -63,5 +63,26 @@ namespace FITApp
             
             
         }
+
+        private int updatingProductID = 0;
+        private void Grid_of_products_changed(object sender, SelectionChangedEventArgs e)
+        {
+            if (this.Grid_of_products.SelectedIndex >= 0)
+            {
+                if (this.Grid_of_products.SelectedItems.Count > 0)
+                {
+                    if (this.Grid_of_products.SelectedItems[0].GetType() == typeof(Product))
+                    {
+                        Product product = (Product)this.Grid_of_products.SelectedItems[0];
+                        Name_Display.Content = product.Name;
+                        Calories_Display.Content = product.Calories;
+                        Comment_Display.Content = product.Comment;
+
+                        updatingProductID = product.Id;
+                    }
+                }
+            }
+        }
+
     }
 }
