@@ -44,7 +44,172 @@
         <Label Content="Comment: " HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="10,287,0,0" Width="88"/>
         <Label x:Name="Comment_Display" Content="" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="92,287,0,0" Width="308" Grid.ColumnSpan="2"/>
         <Button Content="Delete" HorizontalAlignment="Left" Margin="133,259,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="96" Click="Click_Delete" Grid.Column="1"/>
-
-
+        <Label Content="Your goal: " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="10,95,0,0" Width="80" Grid.Column="2" Grid.RowSpan="2"/>
+        <Label Content="NULL" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="62" Grid.Column="2" Margin="90,95,0,0" Grid.RowSpan="2"/>
+        <Label Content="Calories" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="134,95,0,0" Width="66" Grid.Column="2" Grid.RowSpan="2"/>
+        <Label Content="Change Your goal " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="54,10,0,0" Width="144" FontWeight="Normal"/>
+        <ComboBox x:Name="CBox_Age" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Width="56" Height="23">
+            <ComboBoxItem Content="20"></ComboBoxItem>
+            <ComboBoxItem Content="21"></ComboBoxItem>
+            <ComboBoxItem Content="22"></ComboBoxItem>
+            <ComboBoxItem Content="23"></ComboBoxItem>
+            <ComboBoxItem Content="24"></ComboBoxItem>
+            <ComboBoxItem Content="25"></ComboBoxItem>
+            <ComboBoxItem Content="26"></ComboBoxItem>
+            <ComboBoxItem Content="27"></ComboBoxItem>
+            <ComboBoxItem Content="28"></ComboBoxItem>
+            <ComboBoxItem Content="29"></ComboBoxItem>
+            <ComboBoxItem Content="30"></ComboBoxItem>
+            <ComboBoxItem Content="31"></ComboBoxItem>
+            <ComboBoxItem Content="32"></ComboBoxItem>
+            <ComboBoxItem Content="33"></ComboBoxItem>
+            <ComboBoxItem Content="34"></ComboBoxItem>
+            <ComboBoxItem Content="35"></ComboBoxItem>
+            <ComboBoxItem Content="36"></ComboBoxItem>
+            <ComboBoxItem Content="37"></ComboBoxItem>
+            <ComboBoxItem Content="38"></ComboBoxItem>
+            <ComboBoxItem Content="39"></ComboBoxItem>
+            <ComboBoxItem Content="40"></ComboBoxItem>
+            <ComboBoxItem Content="41"></ComboBoxItem>
+            <ComboBoxItem Content="42"></ComboBoxItem>
+            <ComboBoxItem Content="43"></ComboBoxItem>
+            <ComboBoxItem Content="44"></ComboBoxItem>
+            <ComboBoxItem Content="45"></ComboBoxItem>
+            <ComboBoxItem Content="46"></ComboBoxItem>
+            <ComboBoxItem Content="47"></ComboBoxItem>
+            <ComboBoxItem Content="48"></ComboBoxItem>
+            <ComboBoxItem Content="49"></ComboBoxItem>
+            <ComboBoxItem Content="50"></ComboBoxItem>
+            <ComboBoxItem Content="51"></ComboBoxItem>
+            <ComboBoxItem Content="52"></ComboBoxItem>
+            <ComboBoxItem Content="53"></ComboBoxItem>
+            <ComboBoxItem Content="54"></ComboBoxItem>
+            <ComboBoxItem Content="55"></ComboBoxItem>
+            <ComboBoxItem Content="56"></ComboBoxItem>
+            <ComboBoxItem Content="57"></ComboBoxItem>
+            <ComboBoxItem Content="58"></ComboBoxItem>
+            <ComboBoxItem Content="59"></ComboBoxItem>
+            <ComboBoxItem Content="60"></ComboBoxItem>
+        </ComboBox>
+        <Label Content="Your age" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="10,42,0,0" Width="95" FontWeight="Normal"/>
+        <Label Content="Your weight" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="10,75,0,0" Width="95" FontWeight="Normal" Grid.RowSpan="2"/>
+        <ComboBox x:Name="CBox_Weight" HorizontalAlignment="Center" Margin="0,81,0,332" Width="55" Grid.RowSpan="2">
+            <ComboBoxItem Content="51"/>
+            <ComboBoxItem Content="52"/>
+            <ComboBoxItem Content="53"/>
+            <ComboBoxItem Content="54"/>
+            <ComboBoxItem Content="55"/>
+            <ComboBoxItem Content="56"/>
+            <ComboBoxItem Content="57"/>
+            <ComboBoxItem Content="58"/>
+            <ComboBoxItem Content="59"/>
+            <ComboBoxItem Content="60"/>
+            <ComboBoxItem Content="61"/>
+            <ComboBoxItem Content="62"/>
+            <ComboBoxItem Content="63"/>
+            <ComboBoxItem Content="64"/>
+            <ComboBoxItem Content="65"/>
+            <ComboBoxItem Content="66"/>
+            <ComboBoxItem Content="67"/>
+            <ComboBoxItem Content="68"/>
+            <ComboBoxItem Content="69"/>
+            <ComboBoxItem Content="70"/>
+            <ComboBoxItem Content="71"/>
+            <ComboBoxItem Content="72"/>
+            <ComboBoxItem Content="73"/>
+            <ComboBoxItem Content="74"/>
+            <ComboBoxItem Content="75"/>
+            <ComboBoxItem Content="76"/>
+            <ComboBoxItem Content="77"/>
+            <ComboBoxItem Content="78"/>
+            <ComboBoxItem Content="79"/>
+            <ComboBoxItem Content="80"/>
+            <ComboBoxItem Content="81"/>
+            <ComboBoxItem Content="82"/>
+            <ComboBoxItem Content="83"/>
+            <ComboBoxItem Content="84"/>
+            <ComboBoxItem Content="85"/>
+            <ComboBoxItem Content="86"/>
+            <ComboBoxItem Content="87"/>
+            <ComboBoxItem Content="88"/>
+            <ComboBoxItem Content="89"/>
+            <ComboBoxItem Content="90"/>
+            <ComboBoxItem Content="91"/>
+            <ComboBoxItem Content="92"/>
+            <ComboBoxItem Content="93"/>
+            <ComboBoxItem Content="94"/>
+            <ComboBoxItem Content="95"/>
+            <ComboBoxItem Content="96"/>
+            <ComboBoxItem Content="97"/>
+            <ComboBoxItem Content="98"/>
+            <ComboBoxItem Content="99"/>
+            <ComboBoxItem Content="100"/>
+            <ComboBoxItem Content="101"/>
+            <ComboBoxItem Content="102"/>
+            <ComboBoxItem Content="103"/>
+            <ComboBoxItem Content="104"/>
+            <ComboBoxItem Content="105"/>
+            <ComboBoxItem Content="106"/>
+            <ComboBoxItem Content="107"/>
+            <ComboBoxItem Content="108"/>
+            <ComboBoxItem Content="109"/>
+            <ComboBoxItem Content="110"/>
+        </ComboBox>
+        <Label Content="Your height" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="10,6,0,0" Width="95" FontWeight="Normal" Grid.Row="1"/>
+        <ComboBox x:Name="CBox_Height" HorizontalAlignment="Center" Margin="0,12,0,0" VerticalAlignment="Top" Width="56" Grid.Row="1" Height="20">
+            <ComboBoxItem Content="150"/>
+            <ComboBoxItem Content="152"/>
+            <ComboBoxItem Content="153"/>
+            <ComboBoxItem Content="154"/>
+            <ComboBoxItem Content="155"/>
+            <ComboBoxItem Content="156"/>
+            <ComboBoxItem Content="157"/>
+            <ComboBoxItem Content="158"/>
+            <ComboBoxItem Content="159"/>
+            <ComboBoxItem Content="160"/>
+            <ComboBoxItem Content="161"/>
+            <ComboBoxItem Content="162"/>
+            <ComboBoxItem Content="163"/>
+            <ComboBoxItem Content="164"/>
+            <ComboBoxItem Content="165"/>
+            <ComboBoxItem Content="166"/>
+            <ComboBoxItem Content="167"/>
+            <ComboBoxItem Content="168"/>
+            <ComboBoxItem Content="169"/>
+            <ComboBoxItem Content="170"/>
+            <ComboBoxItem Content="171"/>
+            <ComboBoxItem Content="172"/>
+            <ComboBoxItem Content="173"/>
+            <ComboBoxItem Content="174"/>
+            <ComboBoxItem Content="175"/>
+            <ComboBoxItem Content="176"/>
+            <ComboBoxItem Content="178"/>
+            <ComboBoxItem Content="179"/>
+            <ComboBoxItem Content="180"/>
+            <ComboBoxItem Content="181"/>
+            <ComboBoxItem Content="182"/>
+            <ComboBoxItem Content="183"/>
+            <ComboBoxItem Content="184"/>
+            <ComboBoxItem Content="185"/>
+            <ComboBoxItem Content="186"/>
+            <ComboBoxItem Content="187"/>
+            <ComboBoxItem Content="188"/>
+            <ComboBoxItem Content="189"/>
+            <ComboBoxItem Content="190"/>
+            <ComboBoxItem Content="191"/>
+            <ComboBoxItem Content="192"/>
+            <ComboBoxItem Content="193"/>
+            <ComboBoxItem Content="194"/>
+            <ComboBoxItem Content="195"/>
+            <ComboBoxItem Content="196"/>
+            <ComboBoxItem Content="197"/>
+            <ComboBoxItem Content="198"/>
+            <ComboBoxItem Content="199"/>
+            <ComboBoxItem Content="200"/>
+        </ComboBox>
+        <RadioButton x:Name="RB_Male" Content="Male" HorizontalAlignment="Left" Margin="18,42,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <RadioButton x:Name="RB_Female" Content="Female" HorizontalAlignment="Left" Margin="77,42,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.067,0.618"/>
+        <Label Grid.Column="1" Content="5 kg in 1 week!" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Margin="0,31,0,0"/>
+        <Button Content="Change" HorizontalAlignment="Left" Margin="173,73,0,0" VerticalAlignment="Top" Height="35" Width="94" Grid.ColumnSpan="2" Click="Click_Change" Grid.RowSpan="2"/>
     </Grid>
 </Window>
