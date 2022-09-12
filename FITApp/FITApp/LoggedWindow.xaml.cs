@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Text.RegularExpressions;
 using System.Windows.Shapes;
 
 namespace FITApp
@@ -28,6 +29,20 @@ namespace FITApp
                         where d.User == User
                            select d;
             this.Grid_of_products.ItemsSource = products.ToList();
+
+            var goal = from d in db.Goals
+                           where d.User == User 
+                           select d;
+            if (goal.Count() > 0)
+            {
+                Goal_Display.Content = goal;
+            }
+            else
+            {
+                Goal_Display.Content = "";
+                Calories_NULL.Content = "";
+            }
+
         }
 
         private void Click_View(object sender, RoutedEventArgs e)
@@ -99,6 +114,38 @@ namespace FITApp
                 db.SaveChanges();
             }
             Grid_of_products.ItemsSource = db.Products.ToList();
+        }
+
+        private void Click_Change(object sender, RoutedEventArgs e)
+        {
+            int PPM = 0;
+            int Weight = int.Parse(Regex.Replace(CBox_Weight.Items[CBox_Weight.SelectedIndex].ToString(), "[^0-9]", ""));
+            int Height = int.Parse(Regex.Replace(CBox_Weight.Items[CBox_Height.SelectedIndex].ToString(), "[^0-9]", ""));
+            int Age = int.Parse(Regex.Replace(CBox_Weight.Items[CBox_Age.SelectedIndex].ToString(), "[^0-9]", ""));
+            if (RB_Male.IsChecked == true)
+            {
+                //string numberonly = Regex.Replace(CBox_Weight.Items[CBox_Weight.SelectedIndex].ToString(), "[^0-9]", "");
+                //MessageBox.Show(numberonly);
+
+                PPM = (int)(66.47 + (13.75 * Weight) + (5 * Height) - (6.75 * Age));
+            }
+            else if(RB_Female.IsChecked == true)
+            {
+
+                PPM = (int)(665.09 + (9.56 * Weight) + (1.85 * Height) - (4.67 * Age));
+            }
+            DBEntities db = new DBEntities();
+            Goal goal = new Goal()
+            {
+                Calories = PPM,
+                User = (string)UserDisplay.Content
+            };
+            db.Goals.Add(goal);
+            db.SaveChanges();
+
+            Goal_Display.Content = PPM;
+            Calories_NULL.Content = "Calories";
+
         }
     }
 }

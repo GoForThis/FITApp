@@ -45,8 +45,8 @@
         <Label x:Name="Comment_Display" Content="" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="92,287,0,0" Width="308" Grid.ColumnSpan="2"/>
         <Button Content="Delete" HorizontalAlignment="Left" Margin="133,259,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="96" Click="Click_Delete" Grid.Column="1"/>
         <Label Content="Your goal: " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="10,95,0,0" Width="80" Grid.Column="2" Grid.RowSpan="2"/>
-        <Label Content="NULL" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="62" Grid.Column="2" Margin="90,95,0,0" Grid.RowSpan="2"/>
-        <Label Content="Calories" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="134,95,0,0" Width="66" Grid.Column="2" Grid.RowSpan="2"/>
+        <Label x:Name="Goal_Display" Content="NULL" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="62" Grid.Column="2" Margin="90,95,0,0" Grid.RowSpan="2"/>
+        <Label x:Name="Calories_NULL" Content="Calories" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="134,95,0,0" Width="66" Grid.Column="2" Grid.RowSpan="2"/>
         <Label Content="Change Your goal " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="54,10,0,0" Width="144" FontWeight="Normal"/>
         <ComboBox x:Name="CBox_Age" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Width="56" Height="23">
             <ComboBoxItem Content="20"></ComboBoxItem>
