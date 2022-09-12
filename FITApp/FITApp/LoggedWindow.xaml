@@ -36,13 +36,14 @@
         <Label Content="Comment:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="160,185,0,0" Grid.Column="1" Grid.ColumnSpan="2" Width="145"/>
         <Label Content="Date:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="160,221,0,0" Grid.Column="1" Grid.ColumnSpan="2" Width="145"/>
         <DatePicker x:Name="DateToView" HorizontalAlignment="Left" Margin="10,69,0,0" Grid.Row="1" VerticalAlignment="Top" Width="190" Height="33" FontSize="16"/>
-        <Button Content="View" HorizontalAlignment="Left" Margin="205,68,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="82" Grid.ColumnSpan="2" Click="Click_View"/>
+        <Button Content="View" HorizontalAlignment="Left" Margin="205,68,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="94" Grid.ColumnSpan="2" Click="Click_View"/>
         <Label Content="Name:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="10,232,0,0" Width="62"/>
         <Label x:Name="Name_Display" Content="" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="77,232,0,0" Width="323" Grid.ColumnSpan="2"/>
         <Label Content="Calories:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="10,259,0,0" Width="72"/>
         <Label x:Name="Calories_Display" Content="" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="77,259,0,0" Width="323" Grid.ColumnSpan="2"/>
         <Label Content="Comment: " HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="10,287,0,0" Width="88"/>
         <Label x:Name="Comment_Display" Content="" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="92,287,0,0" Width="308" Grid.ColumnSpan="2"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="133,259,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="96" Click="Click_Delete" Grid.Column="1"/>
 
 
     </Grid>

@@ -84,5 +84,21 @@ namespace FITApp
             }
         }
 
+        private void Click_Delete(object sender, RoutedEventArgs e)
+        {
+            DBEntities db = new DBEntities();
+
+            var r = from d in db.Products
+                    where d.Id == updatingProductID
+                    select d;
+            Product obj = r.SingleOrDefault();
+
+            if (obj != null)
+            {
+                db.Products.Remove(obj);
+                db.SaveChanges();
+            }
+            Grid_of_products.ItemsSource = db.Products.ToList();
+        }
     }
 }
