@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FITApp"
         mc:Ignorable="d"
-        Title="FITApp" Height="450" Width="800" MaxWidth="900" MaxHeight="500" MinWidth="590" MinHeight="343">
+        Title="FITApp" Height="500" Width="850" MaxWidth="900" MaxHeight="500" MinWidth="590" MinHeight="343">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -19,8 +19,8 @@
         <Label Grid.Column="1" Content="FITApp" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="48"/>
         <Label Grid.Column="1" Content="Be fit with app!" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" FontSize="16"/>
 
-        <Label Grid.Column="2" Content="Username:" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Label x:Name="UserDisplay" Grid.Column="2" Content="ERROR" HorizontalAlignment="Left" Margin="95,59,0,0" VerticalAlignment="Top" FontSize="16" Width="162"/>
+        <Label Grid.Column="2" Content="Username:" HorizontalAlignment="Left" Margin="26,45,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="UserDisplay" Grid.Column="2" Content="ERROR" HorizontalAlignment="Left" Margin="111,45,0,0" VerticalAlignment="Top" FontSize="16" Width="162"/>
 
         <DataGrid x:Name="Grid_of_products" SelectionChanged="Grid_of_products_changed" IsReadOnly="True" Grid.ColumnSpan="2" Margin="0,107,133,107" Grid.Row="1" />
 
@@ -37,16 +37,16 @@
         <Label Content="Date:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="160,221,0,0" Grid.Column="1" Grid.ColumnSpan="2" Width="145"/>
         <DatePicker x:Name="DateToView" HorizontalAlignment="Left" Margin="10,69,0,0" Grid.Row="1" VerticalAlignment="Top" Width="190" Height="33" FontSize="16"/>
         <Button Content="View" HorizontalAlignment="Left" Margin="205,68,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="94" Grid.ColumnSpan="2" Click="Click_View"/>
-        <Label Content="Name:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="10,232,0,0" Width="62"/>
-        <Label x:Name="Name_Display" Content="" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="77,232,0,0" Width="323" Grid.ColumnSpan="2"/>
-        <Label Content="Calories:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="10,259,0,0" Width="72"/>
-        <Label x:Name="Calories_Display" Content="" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="77,259,0,0" Width="323" Grid.ColumnSpan="2"/>
-        <Label Content="Comment: " HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="10,287,0,0" Width="88"/>
-        <Label x:Name="Comment_Display" Content="" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="92,287,0,0" Width="308" Grid.ColumnSpan="2"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="133,259,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="96" Click="Click_Delete" Grid.Column="1"/>
-        <Label Content="Your goal: " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="10,95,0,0" Width="80" Grid.Column="2" Grid.RowSpan="2"/>
-        <Label x:Name="Goal_Display" Content="NULL" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="62" Grid.Column="2" Margin="90,95,0,0" Grid.RowSpan="2"/>
-        <Label x:Name="Calories_NULL" Content="Calories" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="134,95,0,0" Width="66" Grid.Column="2" Grid.RowSpan="2"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="10,281,0,0" Width="62"/>
+        <Label x:Name="Name_Display" Content="" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="98,281,0,0" Width="323" Grid.ColumnSpan="2"/>
+        <Label Content="Calories:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="10,312,0,0" Width="72"/>
+        <Label x:Name="Calories_Display" Content="" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="98,307,0,0" Width="323" Grid.ColumnSpan="2"/>
+        <Label Content="Comment: " HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="10,343,0,0" Width="88"/>
+        <Label x:Name="Comment_Display" Content="" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Margin="98,343,0,0" Width="308" Grid.ColumnSpan="2"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="27,68,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="96" Click="Click_Delete" Grid.Column="1"/>
+        <Label Content="Your goal: " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="27,70,0,0" Width="80" Grid.Column="2" Grid.RowSpan="2"/>
+        <Label x:Name="Goal_Display" Content="NULL" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="62" Grid.Column="2" Margin="107,70,0,0" Grid.RowSpan="2"/>
+        <Label x:Name="Calories_NULL" Content="Calories" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="151,70,0,0" Width="66" Grid.Column="2" Grid.RowSpan="2"/>
         <Label Content="Change Your goal " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="54,10,0,0" Width="144" FontWeight="Normal"/>
         <ComboBox x:Name="CBox_Age" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Width="56" Height="23">
             <ComboBoxItem Content="20"></ComboBoxItem>
@@ -93,7 +93,7 @@
         </ComboBox>
         <Label Content="Your age" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="10,42,0,0" Width="95" FontWeight="Normal"/>
         <Label Content="Your weight" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="10,75,0,0" Width="95" FontWeight="Normal" Grid.RowSpan="2"/>
-        <ComboBox x:Name="CBox_Weight" HorizontalAlignment="Center" Margin="0,81,0,332" Width="55" Grid.RowSpan="2">
+        <ComboBox x:Name="CBox_Weight" HorizontalAlignment="Center" Margin="0,81,0,380" Width="55" Grid.RowSpan="2">
             <ComboBoxItem Content="51"/>
             <ComboBoxItem Content="52"/>
             <ComboBoxItem Content="53"/>
@@ -211,5 +211,7 @@
         <RadioButton x:Name="RB_Female" Content="Female" HorizontalAlignment="Left" Margin="77,42,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.067,0.618"/>
         <Label Grid.Column="1" Content="5 kg in 1 week!" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Margin="0,31,0,0"/>
         <Button Content="Change" HorizontalAlignment="Left" Margin="173,73,0,0" VerticalAlignment="Top" Height="35" Width="94" Grid.ColumnSpan="2" Click="Click_Change" Grid.RowSpan="2"/>
+        <Label x:Name="INFO" Grid.Column="1" Content="NULL" HorizontalAlignment="Left" Margin="233,338,0,0" Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold" Width="305" Grid.ColumnSpan="2" FontSize="16"/>
+        <Label x:Name="ATE" Content="You ate: " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="233,302,0,0" Width="144" FontWeight="Normal" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1"/>
     </Grid>
 </Window>

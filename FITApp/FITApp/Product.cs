@@ -16,7 +16,7 @@ namespace FITApp
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Calories { get; set; }
+        public int Calories { get; set; }
         public string Comment { get; set; }
         public System.DateTime Date { get; set; }
         public string User { get; set; }

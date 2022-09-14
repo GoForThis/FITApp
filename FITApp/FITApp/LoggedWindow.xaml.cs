@@ -42,6 +42,8 @@ namespace FITApp
                 Goal_Display.Content = "";
                 Calories_NULL.Content = "";
             }
+            ATE.Content = "";
+            Refresh_Status();
 
         }
 
@@ -56,15 +58,18 @@ namespace FITApp
                            where d.User == User && d.Date == dateTime
                            select d;
             this.Grid_of_products.ItemsSource = products.ToList();
+            Refresh_Status();
         }
 
         private void Click_Add(object sender, RoutedEventArgs e)
         {
             DBEntities db = new DBEntities();
+            int Calories = Int16.Parse(Calories_Add.Text);
+
             Product productObject = new Product()
             {
                 Name = Name_Add.Text,
-                Calories = Calories_Add.Text,
+                Calories = Calories,
                 Comment = Comment_Add.Text,
                 User = (string)UserDisplay.Content,
                 Date = (DateTime)Date_Add.SelectedDate
@@ -146,6 +151,44 @@ namespace FITApp
             Goal_Display.Content = PPM;
             Calories_NULL.Content = "Calories";
 
+        }
+        public void Refresh_Status()
+        {
+
+            if(DateToView.SelectedDate.ToString() != "")
+            {
+                DBEntities db = new DBEntities();
+                int sum = 0;
+                DateTime dateTime = (DateTime)DateToView.SelectedDate;
+                string User = (string)UserDisplay.Content;
+
+                var r = from d in db.Products
+                      where d.User == User && d.Date == dateTime
+                      select d.Calories;
+
+                foreach (var item in r)
+                {
+                    sum = (int)(sum + item);
+                }
+                ATE.Content = "You ate: " + sum + " Calories";
+                
+                if(Goal_Display.Content != "")
+                {
+                    int goal = Int16.Parse((string)Goal_Display.Content);
+                    if (goal == sum)
+                    {
+                        INFO.Content = "GOOD JOB!";
+                    }
+                    else if(goal > sum)
+                    {
+                        INFO.Content = "IT'S GOOD, YOU CAN EAT MORE";
+                    }
+                    else
+                    {
+                        INFO.Content = "YOU ATE TO MUCH!";
+                    }
+                }
+            }
         }
     }
 }

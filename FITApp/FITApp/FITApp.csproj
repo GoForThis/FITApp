@@ -82,6 +82,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Goal.cs">
+      <DependentUpon>ManagementSystemModels.tt</DependentUpon>
+    </Compile>
     <Compile Include="LoggedWindow.xaml.cs">
       <DependentUpon>LoggedWindow.xaml</DependentUpon>
     </Compile>
