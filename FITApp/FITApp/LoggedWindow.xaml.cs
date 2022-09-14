@@ -41,6 +41,7 @@ namespace FITApp
             {
                 Goal_Display.Content = null;
                 Calories_NULL.Content = null;
+                INFO.Content = null;    
             }
             ATE.Content = null;
             Refresh_Status();
@@ -49,16 +50,19 @@ namespace FITApp
 
         private void Click_View(object sender, RoutedEventArgs e)
         {
-            DateTime dateTime = (DateTime)DateToView.SelectedDate;
+            if (DateToView.SelectedDate.ToString() != "")
+            {
+                DateTime dateTime = (DateTime)DateToView.SelectedDate;
 
-            string User = (string)UserDisplay.Content;
+                string User = (string)UserDisplay.Content;
 
-            DBEntities db = new DBEntities();
-            var products = from d in db.Products
-                           where d.User == User && d.Date == dateTime
-                           select d;
-            this.Grid_of_products.ItemsSource = products.ToList();
-            Refresh_Status();
+                DBEntities db = new DBEntities();
+                var products = from d in db.Products
+                               where d.User == User && d.Date == dateTime
+                               select d;
+                this.Grid_of_products.ItemsSource = products.ToList();
+                Refresh_Status();
+            }
         }
 
         private void Click_Add(object sender, RoutedEventArgs e)
@@ -80,8 +84,9 @@ namespace FITApp
             Name_Add.Text = "";
             Calories_Add.Text = "";
             Comment_Add.Text = "";
-            
-            
+            Refresh_Status();
+
+
         }
 
         private int updatingProductID = 0;
@@ -118,7 +123,8 @@ namespace FITApp
                 db.Products.Remove(obj);
                 db.SaveChanges();
             }
-            Grid_of_products.ItemsSource = db.Products.ToList();
+            Click_View(sender, e);
+            Refresh_Status();
         }
 
         private void Click_Change(object sender, RoutedEventArgs e)
@@ -175,17 +181,24 @@ namespace FITApp
                 if(Goal_Display.Content != null )
                 {
                     int goal = (int)Goal_Display.Content;
-                    if (goal == sum)
+                    if (goal > 0)
                     {
-                        INFO.Content = "GOOD JOB!";
-                    }
-                    else if(goal > sum)
-                    {
-                        INFO.Content = "IT'S GOOD, YOU CAN EAT MORE";
+                        if (goal == sum)
+                        {
+                            INFO.Content = "GOOD JOB!";
+                        }
+                        else if (goal > sum)
+                        {
+                            INFO.Content = "IT'S GOOD, YOU CAN EAT MORE";
+                        }
+                        else
+                        {
+                            INFO.Content = "YOU ATE TO MUCH!";
+                        }
                     }
                     else
                     {
-                        INFO.Content = "YOU ATE TO MUCH!";
+                        INFO.Content = null;
                     }
                 }
             }
