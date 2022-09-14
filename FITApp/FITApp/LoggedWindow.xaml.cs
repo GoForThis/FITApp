@@ -39,10 +39,10 @@ namespace FITApp
             }
             else
             {
-                Goal_Display.Content = "";
-                Calories_NULL.Content = "";
+                Goal_Display.Content = null;
+                Calories_NULL.Content = null;
             }
-            ATE.Content = "";
+            ATE.Content = null;
             Refresh_Status();
 
         }
@@ -172,9 +172,9 @@ namespace FITApp
                 }
                 ATE.Content = "You ate: " + sum + " Calories";
                 
-                if(Goal_Display.Content != "")
+                if(Goal_Display.Content != null )
                 {
-                    int goal = Int16.Parse((string)Goal_Display.Content);
+                    int goal = (int)Goal_Display.Content;
                     if (goal == sum)
                     {
                         INFO.Content = "GOOD JOB!";
