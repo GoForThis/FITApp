@@ -67,25 +67,33 @@ namespace FITApp
 
         private void Click_Add(object sender, RoutedEventArgs e)
         {
-            DBEntities db = new DBEntities();
-            int Calories = Int16.Parse(Calories_Add.Text);
-
-            Product productObject = new Product()
+            if(Name_Add.Text == "")
+                MessageBox.Show(Name_Add.Text);
+            if (Calories_Add.Text == "")
+                MessageBox.Show(Calories_Add.Text);
+            if (Date_Add.SelectedDate.ToString() == "")
+                MessageBox.Show(Date_Add.SelectedDate.ToString());
+            if (Name_Add.Text != "" && Calories_Add.Text != "" && Date_Add.SelectedDate.ToString() != "")
             {
-                Name = Name_Add.Text,
-                Calories = Calories,
-                Comment = Comment_Add.Text,
-                User = (string)UserDisplay.Content,
-                Date = (DateTime)Date_Add.SelectedDate
-            };
-            db.Products.Add(productObject);
-            db.SaveChanges();
+                DBEntities db = new DBEntities();
+                int Calories = Int16.Parse(Calories_Add.Text);
 
-            Name_Add.Text = "";
-            Calories_Add.Text = "";
-            Comment_Add.Text = "";
-            Refresh_Status();
+                Product productObject = new Product()
+                {
+                    Name = Name_Add.Text,
+                    Calories = Calories,
+                    Comment = Comment_Add.Text,
+                    User = (string)UserDisplay.Content,
+                    Date = (DateTime)Date_Add.SelectedDate
+                };
+                db.Products.Add(productObject);
+                db.SaveChanges();
 
+                Name_Add.Text = "";
+                Calories_Add.Text = "";
+                Comment_Add.Text = "";
+                Refresh_Status();
+            }
 
         }
 
@@ -129,33 +137,37 @@ namespace FITApp
 
         private void Click_Change(object sender, RoutedEventArgs e)
         {
-            int PPM = 0;
-            int Weight = int.Parse(Regex.Replace(CBox_Weight.Items[CBox_Weight.SelectedIndex].ToString(), "[^0-9]", ""));
-            int Height = int.Parse(Regex.Replace(CBox_Weight.Items[CBox_Height.SelectedIndex].ToString(), "[^0-9]", ""));
-            int Age = int.Parse(Regex.Replace(CBox_Weight.Items[CBox_Age.SelectedIndex].ToString(), "[^0-9]", ""));
-            if (RB_Male.IsChecked == true)
+            if (CBox_Age.SelectedIndex != -1 && CBox_Height.SelectedIndex != -1 && CBox_Weight.SelectedIndex != -1 && (RB_Male.IsChecked == true ^ RB_Female.IsChecked == true))
             {
-                //string numberonly = Regex.Replace(CBox_Weight.Items[CBox_Weight.SelectedIndex].ToString(), "[^0-9]", "");
-                //MessageBox.Show(numberonly);
+                int PPM = 0;
+                int Weight = int.Parse(Regex.Replace(CBox_Weight.Items[CBox_Weight.SelectedIndex].ToString(), "[^0-9]", ""));
+                int Height = int.Parse(Regex.Replace(CBox_Weight.Items[CBox_Height.SelectedIndex].ToString(), "[^0-9]", ""));
+                int Age = int.Parse(Regex.Replace(CBox_Weight.Items[CBox_Age.SelectedIndex].ToString(), "[^0-9]", ""));
+                if (RB_Male.IsChecked == true)
+                {
+                    //string numberonly = Regex.Replace(CBox_Weight.Items[CBox_Weight.SelectedIndex].ToString(), "[^0-9]", "");
+                    //MessageBox.Show(numberonly);
 
-                PPM = (int)(66.47 + (13.75 * Weight) + (5 * Height) - (6.75 * Age));
+                    PPM = (int)(66.47 + (13.75 * Weight) + (5 * Height) - (6.75 * Age));
+                }
+                else if (RB_Female.IsChecked == true)
+                {
+
+                    PPM = (int)(665.09 + (9.56 * Weight) + (1.85 * Height) - (4.67 * Age));
+                }
+                DBEntities db = new DBEntities();
+                Goal goal = new Goal()
+                {
+                    Calories = PPM,
+                    User = (string)UserDisplay.Content
+                };
+                db.Goals.Add(goal);
+                db.SaveChanges();
+
+                Goal_Display.Content = PPM;
+                Calories_NULL.Content = "Calories";
+                Refresh_Status();
             }
-            else if(RB_Female.IsChecked == true)
-            {
-
-                PPM = (int)(665.09 + (9.56 * Weight) + (1.85 * Height) - (4.67 * Age));
-            }
-            DBEntities db = new DBEntities();
-            Goal goal = new Goal()
-            {
-                Calories = PPM,
-                User = (string)UserDisplay.Content
-            };
-            db.Goals.Add(goal);
-            db.SaveChanges();
-
-            Goal_Display.Content = PPM;
-            Calories_NULL.Content = "Calories";
 
         }
         public void Refresh_Status()
