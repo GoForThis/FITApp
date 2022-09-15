@@ -16,7 +16,6 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Rectangle Grid.Row="0" Fill="AliceBlue"/>
         <Label Grid.Column="1" Content="FITApp" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="48"/>
         <Label Grid.Column="1" Content="Be fit with app!" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" FontSize="16"/>
 
